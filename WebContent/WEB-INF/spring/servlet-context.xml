@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<mvc:annotation-driven/> 
+	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+	<context:component-scan base-package="com.mycompany.web"></context:component-scan>
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
+	
+	<!--
+	<bean id="ch09Service" 
+		class="com.mycompany.web.service.Ch09Service">
+		<constructor-arg name="arg1" value="홍길동"></constructor-arg>	
+		<constructor-arg name="arg2" value="10"></constructor-arg>
+		
+	</bean>
+	-->
+	
+	<!-- DI(의존성 주입) -->
+	<!-- 
+	<bean id="ch09Controller" class="com.mycompany.web.controller.Ch09Controller">
+		<property name="ch09Service" ref="ch09Service"></property>
+		<property name="ch09Service2" ref="ch09Service2"></property>
+		<property name="ch09Service3" ref="ch09Service3"></property>
+	</bean>
+	 -->
+	<!-- 
+	<bean id="ch09Service" class="com.mycompany.web.service.Ch09Service">
+		<property name="ch09Dao" ref="ch09Dao"></property>
+	</bean>
+	<bean id="ch09Dao" class="com.mycompany.web.dao.Ch09Dao"/>
+	
+	<bean id="ch09Service2" class="com.mycompany.web.service.Ch09Service2">
+		<property name="ch09Dao2" ref="ch09Dao2"></property>
+	</bean>
+	<bean id="ch09Dao2" class="com.mycompany.web.dao.Ch09Dao2"/>
+	
+	<bean id="ch09Service3" class="com.mycompany.web.service.Ch09Service3">
+		<property name="ch09Dao3" ref="ch09Dao3"></property>
+	</bean>
+	<bean id="ch09Dao3" class="com.mycompany.web.dao.Ch09Dao3"/> -->
+
+</beans>
