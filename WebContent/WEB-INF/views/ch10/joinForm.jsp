@@ -89,10 +89,10 @@
 			  <div class="input-group">
 				<input id="mid" name="mid" type="text" class="form-control" placeholder="아이디를 입력하세요">
 				<div class="input-group-append">
-				  <input onclick="checkMid()" type="button" class="btn btn-danger" value="중복체크"/>
+				  <input onclick="return checkMid()" type="button" class="btn btn-danger" value="중복체크"/>
 				</div>
 			  </div>		
-			  <span id="midError" class="error" style="color: red"></span>		
+			  <span id="midError" class="error" style="color: red">${midError}</span>		
 		  </div>
 	
 	
