@@ -174,8 +174,8 @@ public class Ch10Controller {
 	@RequestMapping("/loginForm")
 	public String loginForm(String error, Model model) {
 		
-		if(error != null) {
-			if(error.equals("fail_mid")) {
+		if (error != null) {
+			if (error.equals("fail_mid")) {
 				
 				model.addAttribute("midError", "*ID가 존재하지 않습니다");
 			} else if(error.equals("fail_mpassword")) {
