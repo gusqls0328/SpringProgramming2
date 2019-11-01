@@ -28,11 +28,11 @@
 			$(".error").text(""); // 클래스가 error인것을 다 찾아라, 단순히 텍스트만이면 text
 			
 			// 입력값 겁사
-			if($("#mid").val() == "") {
+			if ($("#mid").val() == "") {
 				$("#midError").text("*ID를 입력하세요");			
 				result = false;
 			}
-			if($("#mpassword").val() == "") {
+			if ($("#mpassword").val() == "") {
 				$("#mpasswordError").text("*비밀번호를 입력하세요");			
 				result = false;
 			}

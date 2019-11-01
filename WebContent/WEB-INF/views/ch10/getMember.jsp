@@ -8,9 +8,9 @@
 <table class="table table-sm">
 	<thead>
 		<tr>
-			<th scope="col">아이디</th>
-			<th scope="col">이름</th>
-			<th scope="col">패스워드</th>
+			<th scope="row">아이디</th>
+			<th scope="row">이름</th>
+			<th scope="row" type="hidden">패스워드</th>
 			
 		</tr>
 	</thead>

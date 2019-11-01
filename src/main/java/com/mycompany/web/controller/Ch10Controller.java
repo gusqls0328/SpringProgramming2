@@ -194,13 +194,13 @@ public class Ch10Controller {
 		
 		LoginResult result = service.login(mid, mpassword); // 로그인은 비즈니스 메소드기 때문에 서비스에 넘기는것이 더 좋음
 		// int result =, static final로 된 상수를 쓰던가
-		if(result == LoginResult.FAIL_MID) {
+		if (result == LoginResult.FAIL_MID) {
 			//model.addAttribute("midError", "*ID가 존재하지 않습니다"); //모델을 쓴 이유는 리턴값으로 전달할 목적인데, 리퀘스트에 전달하는거랑 같은데 리다이렉트는 재요청이기 때문에 다시 쓸수없음
 			
 //			session.setAttribute("midError", "*ID가 존재하지 않습니다");
 //			return "redirect:/ch10/loginForm";
 			return "redirect:/ch10/loginForm?error=fail_mid";
-		} else if(result == LoginResult.FAIL_MPASSWORD) {
+		} else if (result == LoginResult.FAIL_MPASSWORD) {
 //			session.setAttribute("mpasswordError", "*비밀번호가 존재하지 않습니다");
 //			return "redirect:/ch10/loginForm";
 			return "redirect:/ch10/loginForm?error=fail_mpassword";

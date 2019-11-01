@@ -42,11 +42,13 @@ public class Ch10Service {
 	public LoginResult login(String mid, String mpassword) {
 		
 		Ch10Member member = memberDao.selectMember(mid);
-		if(member == null) {
+		
+		if (member == null) {
 			return LoginResult.FAIL_MID;
 			
 		} else {
-			if(mpassword.equals(member.getMpassword())) {
+			
+			if (mpassword.equals(member.getMpassword())) {
 				return LoginResult.SUCCESS;
 				
 			} else {
