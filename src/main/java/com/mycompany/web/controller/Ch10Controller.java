@@ -178,7 +178,7 @@ public class Ch10Controller {
 			if (error.equals("fail_mid")) {
 				
 				model.addAttribute("midError", "*ID가 존재하지 않습니다");
-			} else if(error.equals("fail_mpassword")) {
+			} else if (error.equals("fail_mpassword")) {
 				
 				model.addAttribute("mpasswordError", "*비밀번호가 존재하지 않습니다");
 			}
